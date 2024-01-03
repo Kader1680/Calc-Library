@@ -1,12 +1,12 @@
 // addition function
 using namespace std;
 #include <iostream>
-class Calculate
+class Operator
 {
 protected:
     double a, b, sum;
 public:
-    Calculate(){
+    Operator(){
         a = 0;
         b = 0;
         sum = 0;
@@ -28,25 +28,25 @@ public:
         return b;
     }
 };
-class Addition: public Calculate{
+class Addition: public Operator{
     public:
         double addResult(){
             return a + b;
         }
 };
-class Mutiplication: public Calculate{
+class Mutiplication: public Operator{
     public:
         double MultResult(){
             return a * b;
         }
 };
-class Substraction: public Calculate{
+class Substraction: public Operator{
     public:
         double subResult(){
             return a - b;
         }
 };
-class Divisiotn: public Calculate{
+class Divisiotn: public Operator{
     public:
         double divResult(){
             return a / b;
